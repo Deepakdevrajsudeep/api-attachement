@@ -1,0 +1,9 @@
+<!-- Loop through the attachments and render thumbnails -->
+<% @attachments.each do |attachment| %>
+  <div class="attachment-thumbnail">
+    <%= image_tag attachment.thumbnail_url, class: 'thumbnail' %>
+  </div>
+<% end %>
+
+<!-- Pagination links -->
+<%= will_paginate @attachments %>

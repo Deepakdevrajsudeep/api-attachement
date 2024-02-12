@@ -1,0 +1,6 @@
+<h1>Attachments</h1>
+<p> Attachments of the avatar</p>
+<% @attachments.each do |attachment| %>
+  <%= image_tag attachment.image.variant(resize: '100x100') %>
+<% end %>
+<%= will_paginate @attachments %>
